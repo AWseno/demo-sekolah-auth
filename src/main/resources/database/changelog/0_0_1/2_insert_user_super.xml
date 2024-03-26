@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+              http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="0_0_1_2_1_INSERT_USER_SUPER" author="AKB">
+        <sql>
+            <![CDATA[
+            INSERT INTO `USER`(`ID`,
+                                      `USERNAME`, `PASSWORD`, `EMAIL`, `PHONE`, `RECORD_STATUS`, `ROLE`, `CREATED_BY`, `CREATED_DATE`, `CREATED_FROM`, `LAST_UPDATED_BY`, `LAST_UPDATED_DATE`, `LAST_UPDATED_FROM`)
+            VALUES(1,
+                   'admin', '$2a$04$xo5ET31ggCLmN.yh78R9RObtvcLHD8j2KYcfn1SthLQgfbpkMq7au', 'super@email.co', '081234567890', 'A', 'SUPER_ADMIN', 'SYSTEM', NOW(), 'SYSTEM', 'SYSTEM', NOW(), 'SYSTEM');
+            ]]>
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

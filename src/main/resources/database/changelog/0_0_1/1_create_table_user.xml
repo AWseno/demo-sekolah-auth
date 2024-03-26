@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+              http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="0_0_1_1_1_CREATE_TABLE_USER" author="AKB">
+        <createTable tableName="USER">
+            <column name="ID" autoIncrement="true" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="USER_PK"/>
+            </column>
+            <column name="USERNAME" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(255)"/>
+            <column name="EMAIL" type="VARCHAR(255)"/>
+            <column name="PHONE" type="VARCHAR(255)"/>
+            <column name="RECORD_STATUS" type="CHAR(1)"/>
+            <column name="ROLE" type="VARCHAR(50)"/>
+            <column name="CREATED_DATE" type="DATETIME(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_BY" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_FROM" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_UPDATED_DATE" type="DATETIME(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_UPDATED_BY" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_UPDATED_FROM" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
